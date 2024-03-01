@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "my-application.fullname" . }}
+  name: {{ include "facebooklogin.fullname" . }}
   labels:
-    {{- include "my-application.labels" . | nindent 4 }}
+    {{- include "facebooklogin.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "my-application.selectorLabels" . | nindent 6 }}
+      {{- include "facebooklogin.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "my-application.selectorLabels" . | nindent 8 }}
+        {{- include "facebooklogin.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
