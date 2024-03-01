@@ -1,3 +1,5 @@
+package com.techm.security.facebookloginexample.entity;
+
 // Step 1: Create an entity class to represent a login attempt
 @Entity
 public class LoginAttempt {
